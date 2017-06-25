@@ -5,8 +5,16 @@ import {
 
 @Component({
   selector: 'ng2-acc-chk-menu',
-  templateUrl: 'ng2-acc-chk-menu.html',
-  styleUrls: ['./ng2-acc-chk-menu.scss']
+  template: `
+  <div [id]="options.accordionId" class="accordion">
+    <ng2-acc-chk-list [nodes]="nodes"
+                      [level]="0"
+                      [options]="options"
+                      [parentId]="0"
+                      (onSelected)="selectedHandler($event)">
+    </ng2-acc-chk-list>
+  </div>`,
+  styleUrls: ['./ng2-accordion-menu.scss']
 })
 
 export class Ng2AccChkMenuComponent implements OnInit {

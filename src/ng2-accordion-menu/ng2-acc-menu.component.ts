@@ -3,8 +3,12 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'ng2-acc-menu',
-  templateUrl: 'ng2-acc-menu.html',
-  styleUrls: ['./ng2-acc-menu.scss']
+  template: `
+  <div [id]="options.accordionId" class="accordion">
+    <ng2-acc-list [nodes]="nodes" [level]="0" [options]="options" [parentId]="0" (onSelected)="selectedHandler($event)"></ng2-acc-list>
+  </div>
+  `,
+  styleUrls: ['./ng2-accordion-menu.scss']
 })
 
 export class Ng2AccMenuComponent implements OnInit {

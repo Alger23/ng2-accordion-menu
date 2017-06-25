@@ -3,7 +3,7 @@ import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'ng2-acc-chk-list',
   template: `
-  <ul>
+  <ul class="acc-list">
     <li *ngFor="let node of nodes; let i = index">
       <input type="radio" name="{{options.accordionId + '_' + level}}"
       id="{{options.accordionId+'-' + level + '_'+ parentId + '_' + i}}" value="toggle"
