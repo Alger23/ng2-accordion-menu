@@ -1,0 +1,19 @@
+<p>
+  demo works!
+</p>
+
+<!--<ng2-accordion-menu [nodes]="menus" accordionId="cat" (onNodeChanged)="nodeChangedHandler($event)"></ng2-accordion-menu>-->
+<!--<div class="accordiionlist">
+  <h4><small>娛樂種類</small> </h4>
+  <div class="left-menu mobile_list">
+  </div>
+</div>-->
+
+
+<ng2-acc-menu [nodes]="menus" [options]="menu1Options" (onSelected)="selectedHandler($event)"></ng2-acc-menu>
+
+
+<br/>
+
+
+<ng2-acc-chk-menu [nodes]="menus" [options]="menu2Options" (onSelected)="selectedHandler($event)"></ng2-acc-chk-menu>
